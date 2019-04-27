@@ -1,0 +1,6 @@
+[Unit]
+Description=Updates route53 on a timer.
+
+[Timer]
+OnCalendar=*:0/30
+Unit=update-route53.service

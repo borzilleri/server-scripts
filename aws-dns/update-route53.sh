@@ -5,11 +5,14 @@
 # depending on how you run this script
 #PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
+ZONEID_FILE="./zoneid.txt"
+RECORDSET_FILE="./recordset.txt"
+
 # Hosted Zone ID e.g. BJBK35SKMM9OE
-ZONEID="enter zone id here"
+ZONEID=$(<$ZONEID_FILE)
 
 # The CNAME you want to update e.g. hello.example.com
-RECORDSET="enter cname here"
+RECORDSET=$(<$RECORDSET_FILE)
 
 # More advanced options below
 # The Time-To-Live of this recordset

@@ -1,0 +1,9 @@
+Unit]
+Description=Update Route53 with current external IP
+
+[Service]
+Type=simple
+User=jonathan
+Group=jonathan
+WorkingDirectory=/opt/server-scripts/aws-dns
+ExecStart=/bin/bash /opt/server-scripts/aws-dns/update-route53.sh
