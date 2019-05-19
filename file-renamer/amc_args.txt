@@ -1,3 +1,0 @@
-clean=y
-excludeList=/opt/renamer/amc_exclude.txt
-seriesFormat="Series/{n}/{episode.special ? 'Special' : 'Season '+s.pad(2)}/{episode.special ? '00x'+special.pad(2) : s.pad(2)+'x'+e.pad(2)} - {t.replaceAll(/[`´‘’ʻ]/, /'/).replaceAll(/[!?.]+$/).replacePart(', Part $1')}{'.'+lang}"
