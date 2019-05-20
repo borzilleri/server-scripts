@@ -1,0 +1,9 @@
+[Unit]
+Description=Runs Filebot Renaming Service
+
+[Timer]
+OnCalendar=*-*-* 2,14:00:00
+Unit=file-renamer.service
+
+[Install]
+WantedBy=multi-user.target

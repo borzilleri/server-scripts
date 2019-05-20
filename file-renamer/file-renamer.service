@@ -1,0 +1,9 @@
+[Unit]
+Description=Filebot Media Renamer
+
+[Service]
+Type=simple
+User=filebot
+Group=filebot
+WorkingDirectory=/opt/server-scripts/file-renamer/
+ExecStart=/usr/bin/python3 rename.py /mnt/central_dogma
