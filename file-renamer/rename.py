@@ -25,7 +25,7 @@ if not os.path.isdir(CONFIG['output']['dir']):
 if CONFIG['output']['isMount'] and not os.path.ismount(CONFIG['output']['dir']):
     sys.exit("Output dir is not mounted: {}".format(CONFIG['output']['dir']))
 
-print("Scanning dir: '{}'; Action: '{}'; Conflict strategy: '{}'".format(scan_path, args.action, args.conflict))
+print("Scanning dir: '{}'; Action: '{}'; Conflict strategy: '{}'".format(scan_path, args.action, args.conflict), flush=True)
 
 AMC_OPTIONS = {"--def {}={}".format(k,v) for (k,v) in CONFIG['amc']['options'].items()}
 
@@ -35,7 +35,6 @@ CMD_ARGS = [
     "--action {}".format(args.action),
     "--conflict {}".format(args.conflict),
     "-non-strict",
-    "--log-file {logDir}".format(**CONFIG),
     "--def plex={host}:{token}".format(**CONFIG['plex']),
     " ".join(AMC_OPTIONS),
     str(scan_path)
