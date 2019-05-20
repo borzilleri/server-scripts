@@ -43,6 +43,6 @@ FILEBOT_OPTIONS = [
     "--def @{}".format(CONFIG["amc"]["options"]),
 ]
 
-CMD = "filebot {opts} {dir}".format(opts=" ".join(FILEBOT_OPTIONS), dir=str(scan_path))
+CMD = "{exe} {opts} {dir}".format(exe=CONFIG['filebot']['exe-path'], opts=" ".join(FILEBOT_OPTIONS), dir=str(scan_path))
 print("Running shell command: '{}'".format(CMD))
 subprocess.run(CMD)
