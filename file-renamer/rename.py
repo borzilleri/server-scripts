@@ -33,9 +33,10 @@ CMD_ARGS = [
     "filebot",
     "-script fn:amc",
     "--action {}".format(args.action),
-    "--conflict {}".format(args.conflict),
     "-non-strict",
-    "--def plex={host}:{token}".format(**CONFIG['plex']),
+    "--conflict {}".format(args.conflict),
+    "--output {}".format(CONFIG['output']['dir']),
+    "--def plex={}:{}".format(CONFIG['plex']['host'], CONFIG['plex']['token']),
     " ".join(AMC_OPTIONS),
     str(scan_path)
 ]
